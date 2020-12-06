@@ -5,7 +5,6 @@ use ink_lang as ink;
 #[ink::contract]
 mod atomic_swap {
     use scale::Encode;
-    
     use ink_storage::{
         collections::{
             HashMap as StorageHashMap,
@@ -55,24 +54,6 @@ mod atomic_swap {
         Sha2x256,
         Keccak256,
         Blake2x256,
-    }
-
-    #[derive(scale::Encode, scale::Decode, SpreadLayout, PackedLayout)]
-    #[cfg_attr(
-        feature = "std",
-        derive(
-            Debug,
-            PartialEq,
-            Eq,
-            scale_info::TypeInfo,
-            ink_storage::traits::StorageLayout
-        )
-    )]
-    pub struct Payment {
-        payment_hash: HashedProof,
-        lock_time: u64,
-        state: PaymentState,
-        secret_hash_algo: SecretHashAlgo,
     }
 
     #[ink(event)]
