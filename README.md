@@ -1,0 +1,2 @@
+# Atomic Swaps Ink! Contract
+This project contains an Ink! implementation of atomic swaps. It is a work-in-progress and is based on this [Solidity implementation](https://github.com/artemii235/etomic-swap/blob/master/contracts/EtomicSwap.sol).
